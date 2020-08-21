@@ -1,0 +1,42 @@
+body {
+  font-family: "Roboto Slab", "Georgia";
+  font-size: large;
+  margin: 2em;
+}
+
+@media (min-width: 600px) {
+  section {
+    width: 400px;
+    margin: auto;
+  }
+  .header {
+    width: 420px;
+    margin: auto;
+  }
+}
+
+h1, h3, h5 {
+  font-style: italic;
+  color: #373fff;
+}
+
+h2, h4 {
+  color: #373fff;
+}
+
+/* https://gomakethings.com/smooth-scrolling-links-with-only-css/ */
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* highlighted code blocks */
+pre {
+	border-radius: 10px;
+	padding: 10px;
+}

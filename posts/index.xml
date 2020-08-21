@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Spencer Peterson</title>
+    <title>Posts on Spencer P</title>
     <link>https://spencer-p.github.io/posts/</link>
-    <description>Recent content in Posts on Spencer Peterson</description>
+    <description>Recent content in Posts on Spencer P</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Apr 2020 21:00:21 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2020 20:45:42 -0700</lastBuildDate>
     
 	<atom:link href="https://spencer-p.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>2</title>
-      <link>https://spencer-p.github.io/posts/two/</link>
-      <pubDate>Wed, 22 Apr 2020 21:00:21 -0700</pubDate>
-      
-      <guid>https://spencer-p.github.io/posts/two/</guid>
-      <description>post two </description>
-    </item>
     
     <item>
       <title>Hello</title>
@@ -26,9 +17,8 @@
       <pubDate>Tue, 21 Apr 2020 20:45:42 -0700</pubDate>
       
       <guid>https://spencer-p.github.io/posts/hello/</guid>
-      <description>Hello, world! This is a Hugo Blog!
-I&amp;rsquo;m testing
- some features   And Others  #include &amp;lt;stdio.h&amp;gt; int main(int argc, char *argv[]) { printf(&amp;#34;Hello, world!&amp;#34;); } I sure hope that if I keep typing more text on this page, that it does not show up forever. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+      <description>Hello, world! #include &amp;lt;stdio.h&amp;gt; int main(int argc, char *argv[]) { printf(&amp;#34;Hello, world!&amp;#34;); } Another gravestone of the modern web. Are you still surprised to see some developer&amp;rsquo;s blogspam? Surprised that someone might think it&amp;rsquo;s worth the effort to manager their own personal website? Delusional enough to think they might drive traffic to their poorly maintained website, like it&amp;rsquo;s still the 90s?
+Well, here we are.</description>
     </item>
     
   </channel>
