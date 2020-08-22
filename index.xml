@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spencer P</title>
+    <title>spencerjp.dev</title>
     <link>https://spencer-p.github.io/</link>
-    <description>Recent content on Spencer P</description>
+    <description>Recent content on spencerjp.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Apr 2020 20:45:42 -0700</lastBuildDate>
@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>Hello</title>
+      <title>Hello, World</title>
       <link>https://spencer-p.github.io/posts/hello/</link>
       <pubDate>Tue, 21 Apr 2020 20:45:42 -0700</pubDate>
       
       <guid>https://spencer-p.github.io/posts/hello/</guid>
-      <description>Hello, world! #include &amp;lt;stdio.h&amp;gt; int main(int argc, char *argv[]) { printf(&amp;#34;Hello, world!&amp;#34;); } Another gravestone of the modern web. Are you still surprised to see some developer&amp;rsquo;s blogspam? Surprised that someone might think it&amp;rsquo;s worth the effort to manager their own personal website? Delusional enough to think they might drive traffic to their poorly maintained website, like it&amp;rsquo;s still the 90s?
-Well, here we are.</description>
+      <description>#include &amp;lt;stdio.h&amp;gt; int main(int argc, char *argv[]) { printf(&amp;#34;Hello, world!&amp;#34;); } Oh no, another gravestone of the modern web: some developer&amp;rsquo;s personal blog.</description>
     </item>
     
   </channel>
