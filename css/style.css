@@ -1,7 +1,6 @@
 body {
 	font-family: "Roboto Slab", "Georgia";
 	font-size: large;
-	margin: 2em;
 }
 
 section {
@@ -55,6 +54,18 @@ pre {
 	/* width: 80ch; /*use this rule to make 80 column pre blocks*/
 }
 
+.highlight:hover {
+	width: max-content;
+}
+
 .highlight {
 	font-family: "Roboto Mono";
+}
+
+blockquote {
+	border-left: solid 5px grey;
+	padding-left: 15px;
+	font-style: italic;
+	color: grey;
+	margin: auto;
 }
