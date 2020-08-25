@@ -8,12 +8,9 @@ section {
 	margin: auto;
 }
 
-a {
-	color: #6495ed;
-}
-
-a:visited {
-	color: #6464ed;
+a, a:visited {
+	/* color: #6495ed; */
+	color: #4881ea;
 }
 
 .header {
@@ -37,13 +34,13 @@ a:visited {
 h1, h3, h5 {
 	font-style: normal;
 	/* color: #373fff; */
-	color: #0d3172;
+	/* color: #0d3172; */
 }
 
 h2, h4 {
 	font-style: italic;
 	/* color: #373fff; */
-	color: #0d3172;
+	/* color: #0d3172; */
 }
 
 /* https://gomakethings.com/smooth-scrolling-links-with-only-css/ */
