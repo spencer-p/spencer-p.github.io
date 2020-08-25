@@ -8,31 +8,42 @@ section {
 	margin: auto;
 }
 
+a {
+	color: #6495ed;
+}
+
+a:visited {
+	color: #6464ed;
+}
+
 .header {
-	max-width: 600px;
+	max-width: 640px;
 	margin: auto;
-	font-size: medium;
-	font-style: italic;
 }
 
-/*
+.main_header {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+}
+
 .sub_title {
-	margin-top: -20px;
-}
-*/
-
-.blog_title {
-	margin-left: -20px;
+	font-size: medium;
+	text-align: right;
+	/* display: flex; */
+	/* justify-content: flex-start; */
 }
 
 h1, h3, h5 {
 	font-style: normal;
-	color: #373fff;
+	/* color: #373fff; */
+	color: #0d3172;
 }
 
 h2, h4 {
 	font-style: italic;
-	color: #373fff;
+	/* color: #373fff; */
+	color: #0d3172;
 }
 
 /* https://gomakethings.com/smooth-scrolling-links-with-only-css/ */
@@ -50,12 +61,13 @@ html {
 pre {
 	border-radius: 10px;
 	padding: 10px;
-	overflow-x: auto;
+	overflow-x: hidden;
 	/* width: 80ch; /*use this rule to make 80 column pre blocks*/
 }
 
 .highlight:hover {
 	width: max-content;
+	min-width: 600px;
 }
 
 .highlight {
