@@ -58,7 +58,7 @@ html {
 pre {
 	border-radius: 10px;
 	padding: 10px;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	/* width: 80ch; /*use this rule to make 80 column pre blocks*/
 }
 
