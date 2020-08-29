@@ -1,1 +1,30 @@
-404 Not Found
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>404 Page not found &ndash; spencerjp.dev</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto Mono" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+	<div class="header">
+		<h3><a href="/">← spencerjp.dev</a></h3>
+		<h1 class="blog_title">
+			404 Page not found
+		</h1>
+		Sorry, <span id="not_found"></span> isn't here.
+		<a href="/">Return to home</a>.
+	</div>
+	<section>
+		
+	</section>
+	<script>
+		document.getElementById("not_found").innerText = window.location.pathname;
+	</script>
+</body>
+
