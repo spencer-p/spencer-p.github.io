@@ -1,10 +1,11 @@
 body {
 	font-family: "Roboto Slab", "Georgia";
 	font-size: large;
+	line-height:  1.5;
 }
 
 section {
-	max-width: 600px;
+	max-width: 40em;
 	margin: auto;
 }
 
@@ -14,7 +15,7 @@ a, a:visited {
 }
 
 .header {
-	max-width: 640px;
+	max-width: 42em;
 	margin: auto;
 }
 
@@ -59,16 +60,18 @@ pre {
 	border-radius: 10px;
 	padding: 10px;
 	overflow-x: scroll;
+	background-color: #eee;
 	/* width: 80ch; /*use this rule to make 80 column pre blocks*/
 }
 
-.highlight:hover {
+.highlight pre:hover, pre:hover {
 	width: max-content;
-	min-width: 600px;
+	min-width: calc(100% - 20px); /* minus 20px for the padding */
 }
 
-.highlight {
+code {
 	font-family: "Roboto Mono";
+	font-size: 12pt;
 }
 
 blockquote {
@@ -77,4 +80,8 @@ blockquote {
 	font-style: italic;
 	color: grey;
 	margin: auto;
+}
+
+.footer {
+	height: 200px;
 }
