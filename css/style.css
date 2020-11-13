@@ -5,7 +5,8 @@ body {
 }
 
 section {
-	max-width: 40em;
+	max-width: 39rem;
+	padding: 1rem;
 	margin: auto;
 }
 
@@ -80,6 +81,13 @@ blockquote {
 	font-style: italic;
 	color: grey;
 	margin: auto;
+}
+
+p code {
+	background-color: #ddd;
+	/* border: solid 1px #ddd; */
+	border-radius: 5px;
+	padding: 0px 5px 0px 5px;
 }
 
 .footer {
