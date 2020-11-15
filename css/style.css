@@ -16,7 +16,8 @@ a, a:visited {
 }
 
 .header {
-	max-width: 42em;
+	max-width: 41rem;
+	padding: 1rem;
 	margin: auto;
 }
 
