@@ -23,6 +23,7 @@ a, a:visited {
 
 .main_header {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: baseline;
 	justify-content: space-between;
 }
