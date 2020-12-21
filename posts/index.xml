@@ -6,7 +6,18 @@
     <description>Recent content in Posts on spencerjp.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2020 20:45:42 -0700</lastBuildDate><atom:link href="https://spencer-p.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Dec 2020 21:23:10 -0800</lastBuildDate><atom:link href="https://spencer-p.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effective systemd: Where Are My Backups?</title>
+      <link>https://spencer-p.github.io/posts/systemd-backups/</link>
+      <pubDate>Sun, 20 Dec 2020 21:23:10 -0800</pubDate>
+      
+      <guid>https://spencer-p.github.io/posts/systemd-backups/</guid>
+      <description>Backups are important. Good backups are tested long before the disaster they are meant to recover from. Today I checked the status of my monthly backups.
+$ sudo tarsnap --list-archives | sort [sudo] password for spencer: localhost-2020-08-02_15-25-38 localhost-2020-11-02_00-00-06 Hold on - there should be five of them since August, and I only see two.
+My laptop isn&amp;rsquo;t always on, which is why I set up my backup system on a systemd timer.</description>
+    </item>
+    
     <item>
       <title>Hello, World</title>
       <link>https://spencer-p.github.io/posts/hello/</link>

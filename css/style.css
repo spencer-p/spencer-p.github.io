@@ -2,6 +2,7 @@ body {
 	font-family: "Roboto Slab", "Georgia";
 	font-size: large;
 	line-height:  1.5;
+	color: #333;
 }
 
 section {
@@ -31,6 +32,7 @@ a, a:visited {
 .sub_title {
 	font-size: medium;
 	text-align: right;
+	color: #444;
 	/* display: flex; */
 	/* justify-content: flex-start; */
 }
@@ -39,12 +41,14 @@ h1, h3, h5 {
 	font-style: normal;
 	/* color: #373fff; */
 	/* color: #0d3172; */
+	color: #222;
 }
 
 h2, h4 {
 	font-style: italic;
 	/* color: #373fff; */
 	/* color: #0d3172; */
+	color: #222;
 }
 
 /* https://gomakethings.com/smooth-scrolling-links-with-only-css/ */
@@ -63,7 +67,7 @@ pre {
 	border-radius: 10px;
 	padding: 10px;
 	overflow-x: scroll;
-	background-color: #eee;
+	background-color: #ddd;
 	/* width: 80ch; /*use this rule to make 80 column pre blocks*/
 }
 

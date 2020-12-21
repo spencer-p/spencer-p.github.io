@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Effective systemd: Where Are My Backups? &ndash; spencerjp.dev</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto Slab|Roboto Mono" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css" />
+	<script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw" defer></script>
+</head>
+
+<body>
+	
+<p><b><a href="/">← spencerjp.dev</a></b></p>
+
+<div class="header">
+	<h1 class="blog_title">
+		Effective systemd: Where Are My Backups?
+	</h1>
+	<h4 class="sub_title">
+		<span class="date">Dec 20 2020</span>
+		<span>&mdash;</span>
+		<span class="reading_time">2 minute read</span>
+	</h4>
+	<hr>
+</div>
+
+	<section>
+		<p>Backups are important. Good backups are tested long before the disaster they
+are meant to recover from. Today I checked the status of my monthly backups.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo tarsnap --list-archives | sort
+<span style="color:#f92672">[</span>sudo<span style="color:#f92672">]</span> password <span style="color:#66d9ef">for</span> spencer: 
+localhost-2020-08-02_15-25-38
+localhost-2020-11-02_00-00-06
+</code></pre></div><p>Hold on - there should be <strong>five</strong> of them since August, and I only see <em>two</em>.</p>
+<p>My laptop isn&rsquo;t always on, which is why I set up my backup system on a systemd
+timer. It&rsquo;s not a cronjob that would just be missed if my computer was off. The
+systemd unit is set to <code>Persistent=true</code>, so it should catch up next time my
+laptop starts. Another benefit of systemd: it keeps my logs without
+configuration.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo journalctl -u tarsnap@monthly.service
+-- Boot 8455401982164353ad6f62c1928b7d23 --
+Dec <span style="color:#ae81ff">02</span> 09:04:25 Starting tarsnap <span style="color:#f92672">(</span>monthly<span style="color:#f92672">)</span> backup...
+Dec <span style="color:#ae81ff">02</span> 09:04:25 tarsnap: Error looking up v1-0-0-server.tarsnap.com: Name or servlocalhost not known
+Dec <span style="color:#ae81ff">02</span> 09:04:25 tarsnap: Cannot obtain server address
+Dec <span style="color:#ae81ff">02</span> 09:04:25 tarsnap: Error creating new archive
+Dec <span style="color:#ae81ff">02</span> 09:04:25 tarsnap: Error exit delayed from previous errors.
+Dec <span style="color:#ae81ff">02</span> 09:04:25 tarsnap@monthly.service: Main process exited, code<span style="color:#f92672">=</span>exited, status<span style="color:#f92672">=</span>1/FAILURE
+Dec <span style="color:#ae81ff">02</span> 09:04:25 tarsnap@monthly.service: Failed with result <span style="color:#e6db74">&#39;exit-code&#39;</span>.
+Dec <span style="color:#ae81ff">02</span> 09:04:25 Failed to start tarsnap <span style="color:#f92672">(</span>monthly<span style="color:#f92672">)</span> backup.
+Dec <span style="color:#ae81ff">02</span> 09:04:25 tarsnap@monthly.service: Scheduled restart job, restart counter is at 1.
+Dec <span style="color:#ae81ff">02</span> 09:04:26 Failed to start tarsnap <span style="color:#f92672">(</span>monthly<span style="color:#f92672">)</span> backup.
+...
+Dec <span style="color:#ae81ff">02</span> 09:04:26 tarsnap@monthly.service: Scheduled restart job, restart counter is at 5.
+Dec <span style="color:#ae81ff">02</span> 09:04:26 Stopped tarsnap <span style="color:#f92672">(</span>monthly<span style="color:#f92672">)</span> backup.
+Dec <span style="color:#ae81ff">02</span> 09:04:26 tarsnap@monthly.service: Start request repeated too quickly.
+Dec <span style="color:#ae81ff">02</span> 09:04:26 tarsnap@monthly.service: Failed with result <span style="color:#e6db74">&#39;exit-code&#39;</span>.
+Dec <span style="color:#ae81ff">02</span> 09:04:26 Failed to start tarsnap <span style="color:#f92672">(</span>monthly<span style="color:#f92672">)</span> backup.
+</code></pre></div><p>There it is: Tarsnap can&rsquo;t resolve its domain name. Systemd retries rapidly,
+triggering permanent failure. The lack of a timeout suggests the network wasn&rsquo;t
+connected, or potentially unreachable entirely.</p>
+<p>After some quick searching, I find a systemd unit can be delayed until there is
+an internet connection using</p>
+<pre><code>Wants=network-online.target
+After=network-online.target
+</code></pre><p>And my problem is fixed.</p>
+<p>It would have been nice if tarsnap did not fail fast when the network is down.
+On the other hand, tarsnap does backups well. Systemd does a much better job at
+managing processes. And that&rsquo;s <a href="https://en.wikipedia.org/wiki/Unix_philosophy">pretty darn
+nice</a>.</p>
+
+	</section>
+</body>
+<div class=footer>
+</div>
+
+</html>

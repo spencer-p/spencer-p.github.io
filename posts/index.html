@@ -27,6 +27,26 @@
 			<hr>
 			<article>
 	<h2 class="title">
+		<a href="https://spencer-p.github.io/posts/systemd-backups/">Effective systemd: Where Are My Backups?</a>
+	</h2>
+	
+	<h4 class="sub_title">
+		<span class="date">Dec 20 2020</span>
+		<span>&mdash;</span>
+		<span class="reading_time">2 minute read</span>
+	</h4>
+	<div class="content">
+		Backups are important. Good backups are tested long before the disaster they are meant to recover from. Today I checked the status of my monthly backups.
+$ sudo tarsnap --list-archives | sort [sudo] password for spencer: localhost-2020-08-02_15-25-38 localhost-2020-11-02_00-00-06 Hold on - there should be five of them since August, and I only see two.
+My laptop isn&rsquo;t always on, which is why I set up my backup system on a systemd timer.
+	</div>
+	
+</article>
+
+			
+			<hr>
+			<article>
+	<h2 class="title">
 		<a href="https://spencer-p.github.io/posts/hello/">Hello, World</a>
 	</h2>
 	
