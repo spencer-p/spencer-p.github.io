@@ -30,7 +30,7 @@
 
 	<section>
 		<p>Backups are important. Good backups are tested long before the disaster they
-are meant to recover from. Today I checked the status of my monthly backups.</p>
+are meant to recover from. With this in mind, I checked my backups today:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo tarsnap --list-archives | sort
 <span style="color:#f92672">[</span>sudo<span style="color:#f92672">]</span> password <span style="color:#66d9ef">for</span> spencer: 
 localhost-2020-08-02_15-25-38
@@ -68,8 +68,8 @@ an internet connection using</p>
 After=network-online.target
 </code></pre><p>And my problem is fixed.</p>
 <p>It would have been nice if tarsnap did not fail fast when the network is down.
-On the other hand, tarsnap does backups well. Systemd does a much better job at
-managing processes. And that&rsquo;s <a href="https://en.wikipedia.org/wiki/Unix_philosophy">pretty darn
+On the other hand, tarsnap does backups well, and systemd does a much better job
+at managing processes — and that&rsquo;s <a href="https://en.wikipedia.org/wiki/Unix_philosophy">pretty darn
 nice</a>.</p>
 
 	</section>

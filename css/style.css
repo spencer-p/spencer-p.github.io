@@ -71,6 +71,8 @@ pre {
 	/* width: 80ch; /*use this rule to make 80 column pre blocks*/
 }
 
+
+/* TODO(spencer-p) Disable this if the content is width constrained. */
 .highlight pre:hover, pre:hover {
 	width: max-content;
 	min-width: calc(100% - 20px); /* minus 20px for the padding */
