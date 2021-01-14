@@ -6,7 +6,17 @@
     <description>Recent content on spencerjp.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Dec 2020 21:23:10 -0800</lastBuildDate><atom:link href="https://spencer-p.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Dec 2020 19:40:57 -0800</lastBuildDate><atom:link href="https://spencer-p.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Cake Pizza</title>
+      <link>https://spencer-p.github.io/posts/cake-pizza/</link>
+      <pubDate>Sat, 26 Dec 2020 19:40:57 -0800</pubDate>
+      
+      <guid>https://spencer-p.github.io/posts/cake-pizza/</guid>
+      <description>One of the most memorable pizzas I had was a giant, inches-tall dutch-oven shaped piece of bread with a more conventional pizza resting on top. I probably liked it so much because it was served in the cold forest at night after a long hike, but that won&amp;rsquo;t stop me from trying to recreate this ultimate sicilian pizza.
+Attempt #1 I don&amp;rsquo;t have a dutch oven in the required size, and I am additionally afraid of making something too accurate and disliking it.</description>
+    </item>
+    
     <item>
       <title>Effective systemd: Where Are My Backups?</title>
       <link>https://spencer-p.github.io/posts/systemd-backups/</link>
