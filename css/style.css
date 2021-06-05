@@ -89,6 +89,17 @@ blockquote {
 	font-style: italic;
 	color: grey;
 	margin: auto;
+	background-color: #eee;
+}
+
+blockquote p {
+	display: inline;
+}
+
+blockquote blockquote {
+	background-color: #fff;
+	width: 90%
+	/* This pattern can be continued if needed. */
 }
 
 p code {
