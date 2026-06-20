@@ -1,8 +1,46 @@
+/* css reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+*:not(dialog) {
+  margin: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
 body {
-	font-family: "Roboto Slab", "Georgia";
-	font-size: large;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+#root, #__next {
+  isolation: isolate;
+}
+/* end reset */
+
+body {
+	font-family: "Garamond", "serif";
+	font-size: x-large;
 	line-height:  1.5;
-	color: #333;
+	color: #322a28;
+	background-color: #f1ecd0;
 }
 
 section {
@@ -11,111 +49,58 @@ section {
 	margin: auto;
 }
 
+.banner {
+	background-color: #123524;
+	color: #b3f8c3;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+	background-blend-mode: soft-light; /* Mix noise with color */
+	border-bottom: 2px solid #322a28;
+}
+
+header {
+	max-width: 39rem;
+	padding: 2rem 0.5rem;
+	margin: auto;
+}
+
+header h1, header a, header a:visited {
+	color: #b3f8c3;
+}
+
+header h2 {
+	font-size: 32pt;
+}
+
+header h1 {
+	font-size: 60pt;
+	display: flex;
+	flex-direction:column; 
+}
+
+.lastname {
+	align-self: flex-end;
+}
+
+h2 {
+	font-style: italic;
+}
+
 a, a:visited {
 	/* color: #6495ed; */
 	color: #4881ea;
 }
 
-.header {
-	max-width: 41rem;
-	padding: 1rem;
-	margin: auto;
-}
-
-.main_header {
+footer {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	justify-content: space-between;
+	justify-content: center;
 }
 
-.sub_title {
-	font-size: medium;
-	text-align: right;
-	color: #444;
-	/* display: flex; */
-	/* justify-content: flex-start; */
+.links {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1ch;
 }
 
-h1, h3, h5 {
-	font-style: normal;
-	/* color: #373fff; */
-	/* color: #0d3172; */
-	color: #222;
-}
-
-h2, h4 {
-	font-style: italic;
-	/* color: #373fff; */
-	/* color: #0d3172; */
-	color: #222;
-}
-
-/* https://gomakethings.com/smooth-scrolling-links-with-only-css/ */
-html {
-	scroll-behavior: smooth;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
-}
-
-/* highlighted code blocks */
-pre {
-	border-radius: 10px;
-	padding: 10px;
-	overflow-x: scroll;
-	background-color: #ddd;
-	/* width: 80ch; /*use this rule to make 80 column pre blocks*/
-}
-
-
-/* TODO(spencer-p) Disable this if the content is width constrained. */
-.highlight pre:hover, pre:hover {
-	width: max-content;
-	min-width: calc(100% - 20px); /* minus 20px for the padding */
-}
-
-code {
-	font-family: "Roboto Mono";
-	font-size: 12pt;
-}
-
-blockquote {
-	border-left: solid 5px grey;
-	padding-left: 15px;
-	font-style: italic;
-	color: grey;
-	margin: auto;
-	background-color: #eee;
-}
-
-blockquote p {
-	display: inline;
-}
-
-blockquote blockquote {
-	background-color: #fff;
-	width: 90%
-	/* This pattern can be continued if needed. */
-}
-
-p code {
-	background-color: #ddd;
-	/* border: solid 1px #ddd; */
-	border-radius: 5px;
-	padding: 0px 5px 0px 5px;
-}
-
-.footer {
-	height: 200px;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
+p {
+	margin-bottom: 2rem;
 }
