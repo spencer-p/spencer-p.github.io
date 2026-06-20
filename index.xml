@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>spencerjp.dev</title>
-    <link>https://spencer-p.github.io/</link>
+    <title>Spencer Peterson, Software Engineer</title>
+	<link>https://spencerjp.dev</link>
     <description>Recent content on spencerjp.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://spencer-p.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://spencerjp.dev/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
